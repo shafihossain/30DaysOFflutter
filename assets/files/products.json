@@ -1,0 +1,61 @@
+{
+  "products": [
+    {
+      "ïd": 1,
+      "name": "iPhone 12 Pro Max",
+      "desc": "Apple iPhone 12the generation",
+      "price": 999,
+      "color": "#845EC2",
+      "image": "https://adminapi.applegadgetsbd.com/storage/media/large/2445-37576.jpg"
+    },
+    {
+      "ïd": 2,
+      "name": "Apple Macbook Air M1",
+      "desc": "Apple M1 Mackbook",
+      "price": 1000,
+      "color": "#D65DB1",
+      "image": "https://reviewed-com-res.cloudinary.com/image/fetch/s--pM3BRbA_--/b_white,c_limit,cs_srgb,f_auto,fl_progressive.strip_profile,g_center,h_668,q_auto,w_1187/https://reviewed-production.s3.amazonaws.com/1607081088000/DSC_0877.jpg"
+    },
+    {
+      "ïd": 3,
+      "name": "Xbox Consle",
+      "desc": "Microsoft Xbox",
+      "price": 599,
+      "color": "#FF9671",
+      "image": "https://storage.googleapis.com/pickaboo-prod/media/catalog/product/cache/90e3b9f4120fc209bf60003e3b0e1323/x/b/xbox-s-2.jpg"
+    },
+    {
+      "ïd": 4,
+      "name": "PlayStation 5 Pro",
+      "desc": "SonyPlay Station",
+      "price": 1099,
+      "color": "#2C73D2",
+      "image": "https://www.pxngame.site/wp-content/uploads/2021/03/191259_2.jpg"
+    },
+    {
+      "ïd": 5,
+      "name": "Samsung Galaxy S23 Ultra",
+      "desc": "Samsung Flagship S Series",
+      "price": 1199,
+      "color": "#2C73D2",
+      "image": "https://www.mobiledokan.co/wp-content/uploads/2022/05/Samsung-Galaxy-S23-Ultra-Green.jpg"
+    },
+    {
+      "ïd": 6,
+      "name": "LG Velvet 5G",
+      "desc": "LG Smartphone with 5G Support",
+      "price": 300,
+      "color": "#008E9B",
+      "image": "https://www.gizmochina.com/wp-content/uploads/2020/04/LG-Velvet-2-500x500.jpg"
+    },
+    {
+      "ïd": 7,
+      "name": "Dell XPS 15",
+      "desc": "Dell Laptop with Graphics Card",
+      "price": 3000,
+      "color": "#B39CD0",
+      "image": "https://www.custommacbd.com/cdn/shop/products/dell-xps-15-9520-custom-macbd.png?v=1651468407"
+    }
+   
+  ]
+}

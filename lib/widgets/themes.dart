@@ -14,6 +14,10 @@ class Mytheme {
       ),
       textTheme: Theme.of(context).textTheme);
   static ThemeData darktheme(BuildContext context) => ThemeData(
-    brightness: Brightness.dark,
-  );
+        brightness: Brightness.dark,
+      );
+
+  //colors
+  static Color creamColor = Color(0xfff5f5f5);
+  static Color darkbluishColor = Color(0xff403b58);
 }

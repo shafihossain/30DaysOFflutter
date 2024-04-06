@@ -15,7 +15,7 @@ class HomeDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      backgroundColor: Mytheme.creamColor,
+      backgroundColor: Mytheme.creamColor,  
       bottomNavigationBar: Container(
         color: Colors.white,
         child: ButtonBar(
@@ -29,7 +29,7 @@ class HomeDetailPage extends StatelessWidget {
                         backgroundColor: MaterialStatePropertyAll(Colors.black)
                     
                     ),
-                    child: "Buy".text.color(Colors.white).make()).wh(100,50)
+                    child: "Add to Cart".text.color(Colors.white).make()).wh(150,50)
                 ],
               ).p32(),
       ),
@@ -49,12 +49,19 @@ class HomeDetailPage extends StatelessWidget {
                   child: Container(
                     color: Colors.white,
                     width: context.screenWidth,
-                      child: Column(
-                        children: [ 
-                           catalog.name.text.xl4.bold.color(Mytheme.darkbluishColor).make(),
-                            catalog.desc.text.textStyle(context.captionStyle).make(),
-                        ],
-                      ).py64(),
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [ 
+                             catalog.name.text.xl4.bold.color(Mytheme.darkbluishColor).make(),
+                              catalog.desc.text.textStyle(context.captionStyle).make(),
+                              HeightBox(10),
+                              "Diam sed dolores sit takimata dolores duo. Duo takimata no justo invidunt sit labore eirmod consetetur, sit no takimata dolores dolor eirmod no ipsum nonumy. Consetetur diam dolor lorem dolor sanctus stet. Accusam ut diam magna aliquyam stet, justo at voluptua elitr no et et sea eirmod sea. Amet ipsum."
+                              .text.textStyle(context.captionStyle)
+                              .make()
+                              .p16()
+                          ],
+                        ).py64(),
+                      ),
                   ),
                 ))
               ],

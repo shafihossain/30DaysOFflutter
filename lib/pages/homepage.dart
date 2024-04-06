@@ -9,6 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_application_2/models/catelog.dart';
 import 'package:flutter_application_2/models/catelog.dart';
+import 'package:flutter_application_2/utlites/approutes.dart';
 import 'package:flutter_application_2/widgets/drawer.dart';
 import 'package:flutter_application_2/widgets/home_widget/catalog_list.dart';
 import 'package:flutter_application_2/widgets/item_widget.dart';
@@ -52,6 +53,13 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(onPressed: ()=>
+      Navigator.pushNamed(context, MyRoutes.CartRouter),
+      child: Icon(CupertinoIcons.cart),
+      
+      
+      ),
+  
       backgroundColor: Mytheme.creamColor,
       body: SafeArea(
           child: Container(

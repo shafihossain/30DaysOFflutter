@@ -6,4 +6,5 @@ class MyRoutes {
   static String SplashData = "/Splashscreen";
   static String createAc = "/createaccount";
   static String HomeDetails = "/detail";
+  static String CartRouter = "/cart";
 }

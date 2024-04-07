@@ -2,6 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/pages/buy.dart';
+import 'package:flutter_application_2/utlites/approutes.dart';
 import 'package:flutter_application_2/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -36,7 +38,7 @@ class _cardtotal extends StatelessWidget {
           "\$9900".text.xl4.color(context.theme.focusColor).make(),
           30.widthBox,
           ElevatedButton(
-              onPressed: () {},
+              onPressed: () => Navigator.pushNamed(context, MyRoutes.Buy),
               style: ButtonStyle(
                   backgroundColor:
                       MaterialStatePropertyAll(context.theme.focusColor)),
@@ -61,8 +63,8 @@ class __CartlistState extends State<_Cartlist> {
         return ListTile(
             leading: Icon(Icons.done),
             trailing: IconButton(
-                onPressed: () {}, icon: Icon(Icons.remove_circle_outline)
-                
+                onPressed: () {},
+                icon: Icon(Icons.remove_circle_outline),
                 ),
                 title:"item 1".text.make()
                 );

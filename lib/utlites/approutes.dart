@@ -7,4 +7,5 @@ class MyRoutes {
   static String createAc = "/createaccount";
   static String HomeDetails = "/detail";
   static String CartRouter = "/cart";
+  static String Buy = "/Buy";
 }

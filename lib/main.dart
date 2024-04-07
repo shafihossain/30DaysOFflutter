@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter_application_2/pages/buy.dart';
 import 'package:flutter_application_2/pages/cartpage.dart';
 import 'package:flutter_application_2/pages/createaccount.dart';
 import 'package:flutter_application_2/pages/homepage.dart';
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
         MyRoutes.homepage: (context) => Homepage(),
         MyRoutes.loginroute: (context) => LoginPage(),
         MyRoutes.createAc: (context) => createaccount(),
-        MyRoutes.CartRouter: (context) => CartPage()
+        MyRoutes.CartRouter: (context) => CartPage(),
+        MyRoutes.Buy: (context) => Buy()
       },
     );
   }

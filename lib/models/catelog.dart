@@ -1,12 +1,18 @@
-// ignore_for_file: camel_case_types, non_constant_identifier_names, prefer_typing_uninitialized_variables, empty_constructor_bodies, collection_methods_unrelated_type
+// ignore_for_file: camel_case_types, non_constant_identifier_names, prefer_typing_uninitialized_variables, empty_constructor_bodies, collection_methods_unrelated_type, null_closures
 
 class catalogs {
   static List<Item> Products = [];
-  
+
+  //Get Item by iD
+  Item getbyid(int id) =>
+      Products.firstWhere((element) => element.id != id, orElse: null);
+
+  //Get Item by Possition
+  Item getbyposition(int pos) => Products[pos];
 }
 
 class Item {
-  final int? id;
+  int? id;
   final String name;
   final String desc;
   final num price;
@@ -23,7 +29,7 @@ class Item {
 
   factory Item.fromMap(Map<String, dynamic> map) {
     return Item(
-      id: map["id"] ,
+      id: map["id"],
       name: map["name"],
       desc: map["desc"],
       price: map["price"],
@@ -32,13 +38,11 @@ class Item {
     );
   }
   toMap() => {
-    id : id,
-    "name":name,
-    "desc":desc,
-    "price":price,
-    "color":color,
-    "image": color,
-
-
-  };
+        id: id,
+        "name": name,
+        "desc": desc,
+        "price": price,
+        "color": color,
+        "image": color,
+      };
 }

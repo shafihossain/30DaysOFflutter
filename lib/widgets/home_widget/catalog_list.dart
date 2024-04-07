@@ -9,7 +9,6 @@ import 'package:flutter_application_2/widgets/home_widget/catalog_image.dart';
 import 'package:flutter_application_2/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-
 class CatalogList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -19,10 +18,13 @@ class CatalogList extends StatelessWidget {
         itemBuilder: (context, index) {
           final catalog = catalogs.Products[index];
           return InkWell(
-            onTap:() =>Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeDetailPage(catalog: catalog), 
-            ),
-            ) ,
-            child: catalogitem(catalog: catalog));
+              onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomeDetailPage(catalog: catalog),
+                    ),
+                  ),
+              child: catalogitem(catalog: catalog));
         });
   }
 }
@@ -38,14 +40,14 @@ class catalogitem extends StatelessWidget {
         child: Row(
       children: [
         Hero(
-          tag: Key(catalog.image.toString()),
-          child: catalogimage(image: catalog.image)),
+            tag: Key(catalog.image.toString()),
+            child: catalogimage(image: catalog.image)),
         Expanded(
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            catalog.name.text.lg.bold.color(Mytheme.darkbluishColor).make(),
+            catalog.name.text.lg.bold.color(context.theme.highlightColor).make(),
             catalog.desc.text.textStyle(context.captionStyle).make(),
             10.heightBox,
             ButtonBar(
@@ -54,17 +56,16 @@ class catalogitem extends StatelessWidget {
               children: [
                 "\$${catalog.price}".text.bold.make(),
                 ElevatedButton(
-                  onPressed: (){},
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStatePropertyAll(Colors.black)
-                  
-                  ),
-                  child: "Add to cart".text.color(Colors.white).make())
+                    onPressed: () {},
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStatePropertyAll(context.theme.focusColor)),
+                    child: "Add to cart".text.color(context.theme.indicatorColor).make())
               ],
             ).pOnly(right: 8)
           ],
         ))
       ],
-    )).white.roundedLg.square(120).make().py8();
+    )).color(context.theme.cardColor).roundedLg.square(120).make().py8();
   }
 }

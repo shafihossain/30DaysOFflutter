@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, unused_import
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/widgets/themes.dart';
@@ -16,7 +16,7 @@ class catalogimage extends StatelessWidget {
         .box
         .rounded
         .p12
-        .color(Mytheme.creamColor)
+        .color(context.theme.canvasColor)
         .make()
         .p16()
         .w40(context);

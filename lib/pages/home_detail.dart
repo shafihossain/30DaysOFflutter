@@ -14,10 +14,14 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      backgroundColor: Mytheme.creamColor,  
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+
+
+      ),
+      backgroundColor: context.theme.cardColor,  
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.theme.cardColor,
         child: ButtonBar(
                 alignment: MainAxisAlignment.spaceBetween,
                 buttonPadding: EdgeInsets.zero,
@@ -26,7 +30,7 @@ class HomeDetailPage extends StatelessWidget {
                   ElevatedButton(
                     onPressed: (){},
                     style: ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll(Colors.black)
+                        backgroundColor: MaterialStatePropertyAll(context.theme.focusColor)
                     
                     ),
                     child: "Add to Cart".text.color(Colors.white).make()).wh(150,50)
@@ -47,12 +51,12 @@ class HomeDetailPage extends StatelessWidget {
                   arcType: VxArcType.convey,
                   edge: VxEdge.top,
                   child: Container(
-                    color: Colors.white,
+                    color: context.theme.cardColor,
                     width: context.screenWidth,
                       child: SingleChildScrollView(
                         child: Column(
                           children: [ 
-                             catalog.name.text.xl4.bold.color(Mytheme.darkbluishColor).make(),
+                             catalog.name.text.xl4.bold.color(context.theme.highlightColor).make(),
                               catalog.desc.text.textStyle(context.captionStyle).make(),
                               HeightBox(10),
                               "Diam sed dolores sit takimata dolores duo. Duo takimata no justo invidunt sit labore eirmod consetetur, sit no takimata dolores dolor eirmod no ipsum nonumy. Consetetur diam dolor lorem dolor sanctus stet. Accusam ut diam magna aliquyam stet, justo at voluptua elitr no et et sea eirmod sea. Amet ipsum."

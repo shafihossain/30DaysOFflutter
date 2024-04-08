@@ -1,9 +1,10 @@
-// ignore_for_file: unused_import, use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, camel_case_types, unused_element, unnecessary_import, unused_local_variable
+// ignore_for_file: unused_import, use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, camel_case_types, unused_element, unnecessary_import, unused_local_variable, empty_statements, dead_code
 
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_application_2/utlites/approutes.dart';
 import 'package:flutter_application_2/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -15,10 +16,10 @@ class Buy extends StatefulWidget {
 class _BuyState extends State<Buy> {
   @override
   Widget build(BuildContext context) {
+
     final formkey = GlobalKey<FormState>();
 
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
@@ -44,7 +45,9 @@ class _BuyState extends State<Buy> {
                       validator: (value) {
                         if (value!.isEmpty) ;
 
-                        return "Name cannot be empty";
+                        return "Name is Required";
+
+                        return null;
                       },
                     ),
                     SizedBox(
@@ -128,7 +131,11 @@ class _BuyState extends State<Buy> {
                   "\$9900".text.color(context.theme.focusColor).xl4.make(),
                   30.widthBox,
                   ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        ScaffoldMessenger.of(context).showSnackBar( 
+                          SnackBar(content: "Buying is not supported yet".text.make())
+                        );
+                      },
                       style: ButtonStyle(
                           backgroundColor: MaterialStatePropertyAll(
                               context.theme.focusColor)),

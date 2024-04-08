@@ -45,4 +45,6 @@ class Item {
         "color": color,
         "image": color,
       };
+
+  static fold(int i, Function(dynamic total, dynamic current) param1) {}
 }

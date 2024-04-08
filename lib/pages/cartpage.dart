@@ -63,11 +63,11 @@ class __CartlistState extends State<_Cartlist> {
         return ListTile(
             leading: Icon(Icons.done),
             trailing: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.remove_circle_outline),
-                ),
-                title:"item 1".text.make()
-                );
+              onPressed: () {
+              },
+              icon: Icon(Icons.remove_circle_outline),
+            ),
+            title: "item 1".text.make());
       },
     );
   }
